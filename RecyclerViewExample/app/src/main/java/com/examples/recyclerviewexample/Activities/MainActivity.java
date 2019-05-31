@@ -25,9 +25,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         recyclerView = findViewById(R.id.rec);
-
-
-
+        
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.HORIZONTAL));
@@ -46,7 +44,6 @@ public class MainActivity extends AppCompatActivity
 
         sampleAdapter = new SampleAdapter(sampleDataList,this);
         recyclerView.setAdapter(sampleAdapter);
-
 
     }
 }
