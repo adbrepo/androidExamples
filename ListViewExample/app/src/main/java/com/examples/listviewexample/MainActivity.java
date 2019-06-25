@@ -4,14 +4,14 @@ import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.view.ViewGroup;
 import android.view.LayoutInflater;
-
-
+import android.widget.Toast;
 
 
 import com.examples.listviewexample.models.Producto;
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity
 
         listViewProductos = findViewById(R.id.list_productos);
 
-        ArrayList<Producto> productos = new ArrayList<Producto>();
+        final ArrayList<Producto> productos = new ArrayList<Producto>();
 
 
         productos.add(new Producto("Manzana",10.0,50.0));
@@ -64,6 +64,20 @@ public class MainActivity extends AppCompatActivity
 //        {
 //            Log.d("lista", productoActual.getNombre());
 //        }
+
+        listViewProductos.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        {
+
+            @Override
+            public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3)
+            {
+
+                //Object o = listView.getItemAtPosition(position);
+                // Realiza lo que deseas, al recibir clic en el elemento de tu listView determinado por su posicion.
+                Toast.makeText(MainActivity.this, productos.get(position).getNombre(), Toast.LENGTH_SHORT).show();
+
+            }
+        });
 
     }
 
