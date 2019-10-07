@@ -10,6 +10,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+/*
+* Para debug el disopsitivo debe estar conectado a la misma red que la PC
+*
+* */
+
 import com.androidexamples.sqlitedatabaseexample.Database.UsuariosSqliteHelper;
 
 public class MainActivity extends AppCompatActivity
