@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity
                 Intent intentMain2 = new Intent(getApplicationContext(),Main2Activity.class);
 
                 intentMain2.putExtra("TEXTOINGRESADO",textoIngresado);
+                intentMain2.putExtra("NUMEROINGREADO",10);
 
                 startActivity(intentMain2);
 
