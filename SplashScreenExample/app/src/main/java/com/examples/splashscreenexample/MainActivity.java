@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity
         input.setText("");
         String sInput =input.getText().toString();
 
-        input.length()
 
 
     }

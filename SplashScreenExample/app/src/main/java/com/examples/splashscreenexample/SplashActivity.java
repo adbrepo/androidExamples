@@ -11,6 +11,7 @@ import java.util.TimerTask;
 public class SplashActivity extends AppCompatActivity
 {
     private TimerTask task;
+    private Timer timer;
     private static final long SPLASH_SCREEN_DELAY = 3000;
 
     @Override
@@ -34,7 +35,7 @@ public class SplashActivity extends AppCompatActivity
             }
         };
 
-        Timer timer = new Timer();
+        timer = new Timer();
         timer.schedule(task, SPLASH_SCREEN_DELAY);
 
 

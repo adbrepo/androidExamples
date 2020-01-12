@@ -9,6 +9,9 @@ public class Main2Activity extends AppCompatActivity
     public TextView txtInvitado;
     public String textoRecibido;
 
+    private String sR1;
+    private Double dR1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -19,6 +22,10 @@ public class Main2Activity extends AppCompatActivity
 
         textoRecibido = getIntent().getStringExtra("TEXTOINGRESADO");
         txtInvitado.setText(textoRecibido);
+
+
+        dR1 = Double.valueOf(sR1); // convertir de String a Double
+        sR1 = String.valueOf(dR1);// convertir de Double a String
 
 
     }

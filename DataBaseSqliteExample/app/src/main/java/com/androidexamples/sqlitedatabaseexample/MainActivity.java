@@ -79,9 +79,10 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View v)
             {
                 String[] campos = new String[] {"NOMBRE", "DNI"};
-                String[] args = new String[] {"10","Ale"};
+               // String[] args = new String[] {"10","Ale"};
 
-                Cursor c = db.query("USUARIOS", campos, "DNI=? AND NOMBRE=?", args, null,       null, null);
+              //  Cursor c = db.query("USUARIOS", campos, "DNI=? AND NOMBRE=?", args, null,       null, null);
+                Cursor c = db.query("USUARIOS", campos, null, null, null,       null, null);
 
                 //Nos aseguramos de que existe al menos un registro
                 if (c.moveToFirst())
